@@ -1,0 +1,65 @@
+.best{
+  padding-bottom: 110px;
+  position: relative;
+  &:before{
+    content: url("../images/before-best.png");
+    position: absolute;
+    right: -13%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      width: 534px;
+      height: 465px;
+      border: 20px solid #E5F2E1;
+      top: -40px;
+      left: -5%;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+  }
+  &__card{
+    width: 50%;
+    &-img{
+      width: 100%;
+    }
+    &-right{
+      padding-left: 120px;
+
+    }
+    &-title{
+      @include text(700,44px,130%,#051101);
+
+    }
+    &-list{
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      margin-top: 25px;
+    }
+    &-item{
+      @include text(400,16px,150%,#051101);
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      svg{
+
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .best::before{
+    display: none;
+  }
+}
